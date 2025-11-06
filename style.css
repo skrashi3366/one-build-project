@@ -35,7 +35,7 @@ img{
   transition: tranform.3s ease-in-out;
 }
 
-
+       /* city page */
 
 
 .dropdown {
@@ -77,13 +77,17 @@ img{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
+                 /* navbar section */
 
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
+}
+.active{
+  background-color:blue ;
+  display: block;
 }
 .logo a {
   color: #fff;
@@ -106,16 +110,37 @@ nav {
   color: #fff;
   text-decoration: none;
 }
-.link:hover
-{
-
-color: red;
-
-}
 .icon-link:hover
 {
   color: #e6303d;
 }
+              /*  sub menu */
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: white ;
+    padding: 10px;
+}
+
+nav li:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu li {
+    margin-right: 0;
+    padding: 5px 0;
+}
+.sub-menu li a{
+  color: #000;
+}
+.sub-menu li a:hover{
+  color: blueviolet;
+}
+   
+       /* hero section */
+
+
 .hero {
 
   padding: 5rem 5rem;
@@ -192,35 +217,83 @@ button:hover{
 color: white;
 background-color: red;
 }
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #007acc;
-  color: #fff;
-  position: fixed;
+
+  /*residential page */
+#res-page{
+  background-image: url(residential-image.jpg);
+  height: 90%;
   width: 100%;
-  left: 0;
-  bottom: 0;
+  background-position: center center;
+  background-size:cover;
+  background-repeat:no-repeat ;
 }
-@media (max-width: 600px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-}
-.icon{
-  color: var(--light-black);
-  background-color: var(--secondary-clr);
+#header{
+  font-weight: bold;
+  color: orange;
+  line-height: 3rem;
   text-align: center;
+  text-decoration: underline;
 }
-.icon img{
-  display: inline;
-    height: 40px;
-    width: 40px;
-    
-    
+#header1{
+  font-weight: 200;
+  color: lightcoral;
+  line-height: 3rem;
+  text-align: center;
+  font-size:xx-large;
+
 }
+#submit-container{
+  border: 1px solid red;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+
+}
+
+#res-container {
+    width: 50%;
+    height: 40%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid red;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#submit {
+    color: #333;
+    text-align: center;
+}
+
+#submit1{
+    color: #666;
+}
+
+button[type="submit"] {
+    background-color: orange;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: darkorange;
+}
+
+/* commercial construction page*/
+
+
+/*project management page*/
+
+
+/*raw materials page*/
+
+
+/*furniture &interior page*/
+ 
 
 /* second page -services */
 
@@ -280,7 +353,7 @@ footer {
 .service button:hover {
     background-color: orange;
 }      
-                      /* portfolio */
+                      /* home page-portfolio */
 
 
 .portfolio {
@@ -305,6 +378,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
 }
+
+    /*home page-choose us*/
 .choose-container{
      background-color: #fff;
     padding: 20px;
@@ -320,7 +395,8 @@ footer {
     flex-wrap: wrap;
 
 }
-      /* how it works*/
+
+            /* how it works*/
 .how-it-works {
   
     text-align: center;
@@ -443,5 +519,114 @@ footer {
     color: #333;
     font-size: 18px;
 }
+                        /* footer section*/
+
+footer {
+    background-color: #007acc ;
+    color: #fff;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.useful-links, .our-services, .contact-us {
+    flex-basis: 33%;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom span {
+    margin: 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media  screen and (max-width:700px){
+  .nav-links {
+    display: none;
+  }
+  .icon{
+    display: none;
+  }
+  .container{
+    max-width: 95%;
+  }
+  .hero{
+    height: 60vh;
+  }
+  h1{
+    font-size:1rem ;
+    line-height: 1rem;
+    
+  }
+  h2{
+     font-size:1rem ;
+    line-height: 1rem;
+
+  }
+
+  h3{
+     font-size:2rem ;
+    line-height: 2rem;
+  }
+h4{
+     font-size:1.2rem ;
+    line-height: 1rem;
+    text-align: center;
+  }
+  span{
+         font-size:1.3rem ;
+    line-height: 1.3rem;
+  }
+  h4 span{
+         font-size:1rem ;
+    line-height: 1rem;
+  }
+
+}
+
+  
+
 
 
